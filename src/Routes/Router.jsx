@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from "react-router";
 import Root from '../pages/Root/Root';
 import Error404 from '../pages/Error/Error404';
+import Home from '../pages/Home/Home';
 
 
  export const router = createBrowserRouter([
@@ -13,6 +14,7 @@ import Error404 from '../pages/Error/Error404';
       {
         index:true,
         path:"/",
+        element:<Home></Home>
       }
     ]
     

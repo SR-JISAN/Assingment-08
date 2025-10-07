@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const Header = () => {
+const NavBar = () => {
     return (
        <div className="navbar  shadow-sm">
   <div className="navbar-start">
@@ -15,14 +16,21 @@ const Header = () => {
         <li>
           <a>Parent</a>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <img src="../../assets/logo.png" alt="" />
           </ul>
         </li>
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to='/'  className="text-xl">
+             <span>
+                <img src="../../assets/logo.png" alt="logo" />
+             </span>
+            <h1>
+                HERO.IO
+            </h1>
+            
+        </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -46,4 +54,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NavBar;
