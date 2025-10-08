@@ -15,6 +15,19 @@ import Home from '../pages/Home/Home';
         index:true,
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/home",
+        element:<Home></Home>
+      },
+      {
+        path:"/app",
+        element:<div>this is app part</div>
+      },
+       
+       {
+        path:"/installation",
+        element:<div>this is installation</div>
       }
     ]
     

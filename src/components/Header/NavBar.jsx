@@ -1,56 +1,58 @@
-import React from 'react';
+
+import { useState } from 'react';
 import { Link } from 'react-router';
 
+
 const NavBar = () => {
+const [style,setStyle]=useState(null)
+
     return (
-       <div className="navbar  shadow-sm">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <img src="../../assets/logo.png" alt="" />
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-        <Link to='/'  className="text-xl">
-             <span>
-                <img src="../../assets/logo.png" alt="logo" />
-             </span>
-            <h1>
-                HERO.IO
-            </h1>
+      <div className="shadow">
+      <div className="navbar w-[1200px] mx-auto  ">
+         <div className="navbar-start">
+            <div className="dropdown">
+               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+               </div>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
+               <Link to="/home">
+                <li onClick={()=>setStyle(1)} className={`pt-5 px-5 ${style===1? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Home</li>
+              </Link>
+              <Link to="/app">
+                <li onClick={()=>setStyle(2)} className={`py-3 px-5 ${style===2? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Apps</li>
+              </Link>
+              <Link to="/installation">
+                 <li onClick={()=>setStyle(3)} className={`py-3 px-5 ${style===3? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Installation</li>
+              </Link>
+               </ul>
+            </div>
+       
+              <Link to="/" className='flex items-center'>
+               <img className='w-10' src="/src/assets/logo.png" alt="logo" />
+                 <h1  className="text-xl font-bold bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text"> HERO.IO </h1> 
+              </Link>         
+         </div>
+         <div className="navbar-center hidden lg:flex">
+             <ul className="menu menu-horizontal text-base font-medium gap-4 px-1">
+              <Link to="/home">
+                <li onClick={()=>setStyle(1)} className={`${style===1? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Home</li>
+              </Link>
+              <Link to="/app">
+                <li onClick={()=>setStyle(2)} className={`${style===2? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Apps</li>
+              </Link>
+              <Link to="/installation">
+                 <li onClick={()=>setStyle(3)} className={`${style===3? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Installation</li>
+              </Link>
+             </ul>
+         </div>
+         <div className="navbar-end">
+          <Link to="https://github.com/SR-JISAN/Assingment-08" className="btn text-white py-3 px-4 border-0 rounded flex bg-gradient-to-r from-[#632EE3]  to-[#9F62F2]">
+          <img src="/src/assets/git-img.png" alt="" />
+          Contribute</Link>
             
-        </Link>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>
+         </div>
+      </div>
+      </div>
     );
 };
 
