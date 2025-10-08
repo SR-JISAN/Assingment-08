@@ -14,7 +14,7 @@ const Error404 = () => {
                 <p className='text-center mt-3 text-[#627382] text-base'>The page you are looking for is not available.</p>
                 <div className='text-center mt-5'>
 
-                <Link to="/"><button className='btn bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] py-4 px-10 border-0 shadow-sm rounded-lg shadow-gray-400'>Go Back</button></Link>
+                <a href="/"><button className='btn bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] py-4 px-10 border-0 shadow-sm rounded-lg shadow-gray-400'>Go Back</button></a>
                 </div>
             </div>
             <Footer></Footer>

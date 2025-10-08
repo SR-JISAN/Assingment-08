@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import BarChart from '../../components/BarChart/BarCharts';
 
 const TrendCardDetails = () => {
     const {id} = useParams()
@@ -41,7 +42,7 @@ const TrendCardDetails = () => {
              
             </div>
          </div>
-
+         <BarChart singleData={singleData}></BarChart>
          <div className="text-[#627382]">
             <h1 className='font-semibold mb-6 text-xl text-[#001931]'>Description</h1>
             <p>This focus app takes the proven Pomodoro technique and makes it even more practical for modern lifestyles. Instead of just setting a timer, it builds a complete environment for deep work, minimizing distractions and maximizing concentration. Users can create custom work and break intervals, track how many sessions they complete each day, and review detailed statistics about their focus habits over time. The design is minimal and calming, reducing cognitive load so you can focus entirely on the task at hand. Notifications gently let you know when to pause and when to resume, helping you maintain a healthy rhythm between work and rest.
@@ -51,9 +52,89 @@ const TrendCardDetails = () => {
                          </p> 
                          <p>
              For people who struggle with procrastination, the app provides motivational streaks and achievements. Completing multiple Pomodoro sessions unlocks milestones, giving a sense of accomplishment. This gamified approach makes focusing more engaging and less like a chore. Whether you’re studying for exams, coding, writing, or handling office work, the app adapts to your routine. By combining focus tracking, task management, and motivational tools, this Pomodoro app ensures that you not only work harder but also smarter. It is a personal trainer for your brain, keeping you disciplined, refreshed, and productive throughout the day.</p>
-</div>
+         </div>
     </div>
     );
 };
 
 export default TrendCardDetails;
+
+
+
+
+
+
+
+
+
+
+//   {
+//     name: 'Page G',
+//     uv: 3490,
+//     pv: 4300,
+//     amt: 2100,
+//   },
+// ];
+
+// const getIntroOfPage = (label) => {
+//   if (label === 'Page A') {
+//     return "Page A is about men's clothing";
+//   }
+//   if (label === 'Page B') {
+//     return "Page B is about women's dress";
+//   }
+//   if (label === 'Page C') {
+//     return "Page C is about women's bag";
+//   }
+//   if (label === 'Page D') {
+//     return 'Page D is about household goods';
+//   }
+//   if (label === 'Page E') {
+//     return 'Page E is about food';
+//   }
+//   if (label === 'Page F') {
+//     return 'Page F is about baby food';
+//   }
+//   return '';
+// };
+
+// const CustomTooltip = ({ active, payload, label }) => {
+//   const isVisible = active && payload && payload.length;
+//   return (
+//     <div className="custom-tooltip" style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+//       {isVisible && (
+//         <>
+//           <p className="label">{`${label} : ${payload[0].value}`}</p>
+//           <p className="intro">{getIntroOfPage(label)}</p>
+//           <p className="desc">Anything you want can be displayed here.</p></>
+//       )}
+//     </div>
+//   );
+// };
+
+// const Example = () => {
+//   return (
+//     <ResponsiveContainer width="100%" height="100%">
+//       <BarChart
+//         width={500}
+//         height={300}
+//         data={data}
+//         margin={{
+//           top: 5,
+//           right: 30,
+//           left: 20,
+//           bottom: 5,
+//         }}
+//       >
+//         <CartesianGrid strokeDasharray="3 3" />
+//         <XAxis dataKey="name" />
+//         <YAxis />
+//         <Tooltip content={CustomTooltip} />
+//         <Legend />
+//         <Bar dataKey="pv" barSize={20} fill="#8884d8" />
+//       </BarChart>
+//     </ResponsiveContainer>
+//   );
+// };
+
+// export default Example;

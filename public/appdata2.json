@@ -28,11 +28,11 @@
     "ratingAvg": 4.6,
     "downloads": 5,
     "ratings": [
-      { "name": "1 star", "count": 10000 },
-      { "name": "2 star", "count": 5000 },
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 50000 },
       { "name": "3 star", "count": 40000 },
-      { "name": "4 star", "count": 300000 },
-      { "name": "5 star", "count": 850000 }
+      { "name": "4 star", "count": 30000 },
+      { "name": "5 star", "count": 8500 }
     ]
   },
   {
