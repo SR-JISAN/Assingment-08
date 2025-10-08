@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import NavBar from '../../components/Header/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 
 const Error404 = () => {
     return (
         <div>
+            <NavBar></NavBar>
             <div className='p-20'>
                 <img className='w-full lg:w-[40%] mx-auto' src="/src/assets/error-404.png" alt="Error-400" />
                 <h1 className='text-center mt-4 text-4xl text-[#001931] font-semibold'>Oops, page not found!</h1>
@@ -14,7 +17,7 @@ const Error404 = () => {
                 <Link to="/"><button className='btn bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] py-4 px-10 border-0 shadow-sm rounded-lg shadow-gray-400'>Go Back</button></Link>
                 </div>
             </div>
-            
+            <Footer></Footer>
         </div>
     );
 };

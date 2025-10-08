@@ -15,7 +15,6 @@ const Home = () => {
         <div className='bg-[#f9f9f9] pt-20'>
             <Banner></Banner>
             <Suspense fallback={<Loading></Loading>}>
-
                 <TrendingApp TrendAppData={TrendAppData}></TrendingApp>
             </Suspense>
             

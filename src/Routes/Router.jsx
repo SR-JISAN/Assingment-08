@@ -3,6 +3,8 @@ import { createBrowserRouter } from "react-router";
 import Root from '../pages/Root/Root';
 import Error404 from '../pages/Error/Error404';
 import Home from '../pages/Home/Home';
+import Loading from '../components/Loader/Loading';
+import TrendCardDetails from '../pages/TrendCardDetails/TrendCardDetails';
 
 
  export const router = createBrowserRouter([
@@ -15,6 +17,7 @@ import Home from '../pages/Home/Home';
         index:true,
         path:"/",
         element:<Home></Home>
+        
       },
       {
         path:"/home",
@@ -28,6 +31,12 @@ import Home from '../pages/Home/Home';
        {
         path:"/installation",
         element:<div>this is installation</div>
+      },
+      {
+        path:'/TCDetails/:id',
+        element: <TrendCardDetails></TrendCardDetails>,
+        loader:()=>fetch('appData2.json'),
+        hydrateFallbackElement:<Loading></Loading>
       }
     ]
     
