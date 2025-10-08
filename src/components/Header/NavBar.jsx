@@ -27,10 +27,10 @@ const [style,setStyle]=useState(null)
                </ul>
             </div>
        
-              <Link to="/" className='flex items-center'>
+              <a href="/" className='flex items-center'>
                <img className='w-10' src="/src/assets/logo.png" alt="logo" />
                  <h1  className="text-xl font-bold bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text"> HERO.IO </h1> 
-              </Link>         
+              </a>         
          </div>
          <div className="navbar-center hidden lg:flex">
              <ul className="menu menu-horizontal text-base font-medium gap-4 px-1">
