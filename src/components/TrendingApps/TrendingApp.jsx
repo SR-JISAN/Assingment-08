@@ -38,10 +38,14 @@ const TrendingApp = ({TrendAppData}) => {
            </div>
        </div>
        </Link> 
-
-         )
-}
+ )
+}      
     </div>
+    <div className=" flex justify-center pt-10 ">
+        <Link to="/app">
+           <button className='btn border-0 bg-gradient-to-r from-[#632EE3]  to-[#9F62F2]'>Show All</button>
+        </Link>
+       </div>
         </div>
     );
 };

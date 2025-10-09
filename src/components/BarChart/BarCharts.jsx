@@ -21,8 +21,8 @@ const BarCharts = ({singleData}) => {
           layout="vertical"
           margin={{ top: 5, right: 20, left: 20, bottom: 5 }}
         >
-          <XAxis type="number" />
-          <YAxis dataKey="name" type="category" width={70} />
+          <XAxis type="number"/>
+          <YAxis dataKey="name"  type="category" width={70} />
           <Tooltip />
           <Bar dataKey="count" fill="orange" barSize={25} />
         </BarChart>

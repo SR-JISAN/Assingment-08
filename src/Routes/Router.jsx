@@ -5,6 +5,8 @@ import Error404 from '../pages/Error/Error404';
 import Home from '../pages/Home/Home';
 import Loading from '../components/Loader/Loading';
 import TrendCardDetails from '../pages/TrendCardDetails/TrendCardDetails';
+import AllApp from '../pages/AllApp/AllApp';
+import AppDetails from '../pages/AppDetails/AppDetails';
 
 
  export const router = createBrowserRouter([
@@ -25,7 +27,7 @@ import TrendCardDetails from '../pages/TrendCardDetails/TrendCardDetails';
       },
       {
         path:"/app",
-        element:<div>this is app part</div>
+        element:<AllApp></AllApp>,
       },
        
        {
@@ -36,6 +38,12 @@ import TrendCardDetails from '../pages/TrendCardDetails/TrendCardDetails';
         path:'/TCDetails/:id',
         element: <TrendCardDetails></TrendCardDetails>,
         loader:()=>fetch('appData2.json'),
+        hydrateFallbackElement:<Loading></Loading>
+      },
+      {
+        path:'/CardDetails/:id',
+        element: <AppDetails></AppDetails>,
+        loader:()=>fetch('appData.json'),
         hydrateFallbackElement:<Loading></Loading>
       }
     ]
