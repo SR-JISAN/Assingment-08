@@ -1,7 +1,9 @@
-// import React from 'react'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import BarChart from '../../components/BarChart/BarCharts';
+import swal from 'sweetalert';
+import { addToLS } from '../../Utilityes/addToLocal';
+
 
 const AppDetails = () => {
     
@@ -9,14 +11,32 @@ const AppDetails = () => {
         const {id} = useParams()
         const Id =parseInt(id)
         const data =useLoaderData()
-        console.log(data)
         const singleData =data.find(card=>card.id===Id)
         const {image,title,companyName,downloads,ratingAvg,reviews,size} =   singleData ;
-    
-    const handelInstall =()=>{
-        setIsInstall(true)
+
+        const [disable,setDisable]=useState('')
         
-    }
+            const getStoreApp = () => {
+            const appData = localStorage.getItem("App");
+            if (appData) {
+              return JSON.parse(appData);
+            }
+            return [];
+          };
+        
+          useEffect(() => {
+            const stored = getStoreApp();
+            if (stored.includes(Id)) {
+              setDisable('disable')
+            }
+          }, [Id]);
+    
+    const handelInstall =(id)=>{
+    addToLS(id)
+    swal("Good job!", "You Installed The App!", "success")
+    setIsInstall(true)
+    
+}
 
 
     return (
@@ -50,7 +70,8 @@ const AppDetails = () => {
                     <h1 className='font-bold text-3xl'>{reviews}K</h1>
                   </div>
                </div>
-                  <button  onClick={()=>handelInstall()} disabled={isInstall} className=" mt-7 py-3 px-5 text-lg font-semibold border-0 rounded-md bg-[#00D390] text-white hover:bg-[#00ba7c]  disabled:bg-gray-500 disabled:opacity-70 disabled:cursor-not-allowed disabled:text-gray-300  transition-all duration-300"> {isInstall ? `Installed ` : `Install Now(${size}MB)`}  </button>
+                  <button  onClick={()=>handelInstall(Id)} disabled={isInstall ? isInstall : disable} className=" mt-7 py-3 px-5 text-lg font-semibold border-0 rounded-md bg-[#00D390] text-white hover:bg-[#00ba7c]  disabled:bg-gray-500 disabled:opacity-70 disabled:cursor-not-allowed disabled:text-gray-300  transition-all duration-300"> {
+                  isInstall? "Installed": disable ? 'Installed':`Install Now(${size}MB)`} </button>
              
             </div>
          </div>

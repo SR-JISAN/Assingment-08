@@ -1,11 +1,12 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router';
 
 
 const NavBar = () => {
 const [style,setStyle]=useState(null)
-
+const handelNav =(p)=>{
+   setStyle(p)
+}
     return (
       <div className="shadow">
       <div className="navbar  max-w-[1200px] mx-auto  ">
@@ -16,13 +17,13 @@ const [style,setStyle]=useState(null)
                </div>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
                <Link to="/home">
-                <li onClick={()=>setStyle(1)} className={`pt-5 px-5 ${style===1? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Home</li>
+                <li onClick={()=>handelNav(1)} className={`pt-5 px-5 ${style===1? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Home</li>
               </Link>
               <Link to="/app">
-                <li onClick={()=>setStyle(2)} className={`py-3 px-5 ${style===2? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Apps</li>
+                <li onClick={()=>handelNav(2)} className={`py-3 px-5 ${style===2? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Apps</li>
               </Link>
               <Link to="/installation">
-                 <li onClick={()=>setStyle(3)} className={`py-3 px-5 ${style===3? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Installation</li>
+                 <li onClick={()=>handelNav(3)} className={`py-3 px-5 ${style===3? "bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text border-b-2 border-[#632EE3] rounded-sm py-1  " :"" } `}>Installation</li>
               </Link>
                </ul>
             </div>

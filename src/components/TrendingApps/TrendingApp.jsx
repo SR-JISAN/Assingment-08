@@ -2,11 +2,9 @@ import React, { use } from 'react';
 import TrendCardDetails from '../../pages/TrendCardDetails/TrendCardDetails';
 import { Link } from 'react-router';
 
-
-
-
 const TrendingApp = ({TrendAppData}) => {
     const trendDatas = use(TrendAppData)
+    
     return (
         <div className='py-20 max-w-[1200px] mx-auto'>
             <h1 className='text-center text-[#001931] font-bold text-5xl'>Trending Apps</h1>
@@ -17,8 +15,8 @@ const TrendingApp = ({TrendAppData}) => {
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 {
     trendDatas.map((data,index) => 
-        <Link key={data.id} to={`/TCDetails/${data.id}`}>
-        <div key={index} className="card bg-white p-4  h-[100%] shadow-sm">
+        <Link  key={data.id} to={`/TCDetails/${data.id}`}>
+        <div  key={index} className="card bg-white p-4  h-[100%] shadow-sm">
            <figure className='h-[90%] lg:h-[60%] '>
              <img className='w-full' src={data.image} alt="Shoes"/>
            </figure>
