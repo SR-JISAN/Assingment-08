@@ -46,8 +46,17 @@ const handleSort =(sortType)=>{
 
 const handelUnInstalled =(id)=>{
      removeFromLS(id.id);
-    swal(`Do You want to UnInstalled ${id.title}😱😨
-          Also your Item Removing From Local Storage`)
+     swal({
+  title: "Are you sure?",
+  text: `Are you sure that you want to delete ${id.title}?`,
+  icon: "warning",
+  dangerMode: true,
+})
+.then(willDelete => {
+  if (willDelete) {
+    swal("Deleted!",  `${id.title} has been deleted!`, "success");
+  }
+});
    setInstall(prev=>prev.filter(app=>app.id !==id.id))
 }
 
