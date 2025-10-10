@@ -9,6 +9,14 @@ const getStoreApp =()=>{
         return []
     }
 }
+export const removeFromLS = (id) => {
+  const stored = localStorage.getItem("App");
+  if (stored) {
+    const parsed = JSON.parse(stored); 
+    const updated = parsed.filter(itemId => itemId !== id); 
+    localStorage.setItem("App", JSON.stringify(updated)); 
+  }
+};
 
 
 const addToLS =(id)=>{
@@ -24,4 +32,4 @@ const addToLS =(id)=>{
         localStorage.setItem("App",AppData)
     }
 }
-export {addToLS}
+export {addToLS,getStoreApp}

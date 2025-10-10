@@ -7,6 +7,7 @@ import Loading from '../components/Loader/Loading';
 import TrendCardDetails from '../pages/TrendCardDetails/TrendCardDetails';
 import AllApp from '../pages/AllApp/AllApp';
 import AppDetails from '../pages/AppDetails/AppDetails';
+import Installation from '../pages/Installation/Installation';
 
 
  export const router = createBrowserRouter([
@@ -32,18 +33,20 @@ import AppDetails from '../pages/AppDetails/AppDetails';
        
        {
         path:"/installation",
-        element:<div>this is installation</div>
+        element:<Installation></Installation>,
+        loader:()=>fetch('/appData.json'),
+        hydrateFallbackElement:<Loading></Loading>
       },
       {
         path:'/TCDetails/:id',
         element: <TrendCardDetails></TrendCardDetails>,
-        loader:()=>fetch('appData2.json'),
+        loader:()=>fetch('/appData2.json'),
         hydrateFallbackElement:<Loading></Loading>
       },
       {
         path:'/CardDetails/:id',
         element: <AppDetails></AppDetails>,
-        loader:()=>fetch('appData.json'),
+        loader:()=>fetch('/appData.json'),
         hydrateFallbackElement:<Loading></Loading>
       }
     ]

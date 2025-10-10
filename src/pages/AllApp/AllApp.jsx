@@ -29,6 +29,8 @@ const AllApp = () => {
     const lower = term.toLocaleLowerCase()
     const searchApp = lower? appDatas.filter(app=>app.title.toLocaleLowerCase().includes(lower)):appDatas;
  
+
+
 return (
     <>
       <div className="bg-[#f9f9f9]">
