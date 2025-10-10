@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { Github } from 'lucide-react';
 
 
 const NavBar = () => {
@@ -29,7 +30,7 @@ const handelNav =(p)=>{
             </div>
        
               <a href="/" className='flex items-center'>
-               <img className='w-10' src="../../../src/assets/logo.png" alt="logo" />
+               <img className='w-10' src="/src/assets/logo.png" alt="logo" />
                  <h1  className="text-xl font-bold bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text"> HERO.IO </h1> 
               </a>         
          </div>
@@ -48,7 +49,7 @@ const handelNav =(p)=>{
          </div>
          <div className="navbar-end">
           <Link to="https://github.com/SR-JISAN/Assingment-08" className="btn text-white py-3 px-4 border-0 rounded flex bg-gradient-to-r from-[#632EE3]  to-[#9F62F2]">
-          <img src="../../../src/assets/git-img.png" alt="" />
+          <Github />
           Contribute</Link>
             
          </div>

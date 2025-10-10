@@ -60,12 +60,12 @@ const AppDetails = () => {
                     <h1 className='font-bold text-3xl'>{downloads}M</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-ratings.png" alt="" />
+                    <img src="/src/assets/icon-ratings.png" alt="rating" />
                     <p className='text-base text-[#627382]'>Average Ratings</p>
                     <h1 className='font-bold text-3xl'>{ratingAvg}</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-review.png" alt="" />
+                    <img src="/src/assets/icon-review.png" alt="review" />
                     <p className='text-base text-[#627382]'>Total Reviews</p>
                     <h1 className='font-bold text-3xl'>{reviews}K</h1>
                   </div>

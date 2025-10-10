@@ -9,15 +9,15 @@ const Banner = () => {
                 <p className='w-[61%] text-[#627382] pt-4 text-center mx-auto'>At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
                 <div className="flex justify-center mt-10 gap-4 items-center">
                     <Link to={"https://play.google.com/store/apps?hl=en"}>
-                    <button className='btn bg-transparent border-[#D2D2D2] text-[#001931]'><img src="../../../src/assets/playStore.png" alt="playStore" />Google Play</button></Link>
+                    <button className='btn bg-transparent border-[#D2D2D2] text-[#001931]'><img src="/src/assets/playStore.png" alt="playStore" />Google Play</button></Link>
                     <Link to={'https://www.apple.com/store'}>
-                    <button className='btn bg-transparent border-[#D2D2D2] text-[#001931]'><img src="../../../src/assets/appStore.png" alt="appStore" />App Store</button>
+                    <button className='btn bg-transparent border-[#D2D2D2] text-[#001931]'><img src="/src/assets/appStore.png" alt="appStore" />App Store</button>
                     </Link>
                 </div>
             </div>
             <div className='mt-10'>
                 <div className="flex justify-center">
-                        <img className='w-[100%] lg:w-[60%]' src="../../../src/assets/hero.png" alt="hero" />
+                        <img className='w-[100%] lg:w-[60%]' src="/src/assets/hero.png" alt="hero" />
                 </div>
                 <div className="py-20 bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] text-center text-white">
                         <h1 className='font-bold  text-4xl'>Trusted by Millions, Built for You</h1>

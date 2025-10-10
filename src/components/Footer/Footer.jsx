@@ -40,9 +40,9 @@ const Footer = () => {
                 <h1 className='text-2xl'>Support And Download</h1>
                 <div className="flex lg:justify-center my-10 gap-4 items-center">
                     <Link to={"https://play.google.com/store/apps?hl=en"}>
-                    <button className='btn bg-transparent border-[#D2D2D2] '><img src="../../../src/assets/playStore.png" alt="playStore" />Google Play</button></Link>
+                    <button className='btn bg-transparent border-[#D2D2D2] '><img src="/src/assets/playStore.png" alt="playStore" />Google Play</button></Link>
                     <Link to={'https://www.apple.com/store'}>
-                    <button className='btn bg-transparent border-[#D2D2D2]'><img src="../../../src/assets/appStore.png" alt="appStore" />App Store</button>
+                    <button className='btn bg-transparent border-[#D2D2D2]'><img src="/src/assets/appStore.png" alt="appStore" />App Store</button>
                     </Link>
                 </div>
                 
