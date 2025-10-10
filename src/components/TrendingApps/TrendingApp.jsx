@@ -25,11 +25,11 @@ const TrendingApp = ({TrendAppData}) => {
                
              <div className="flex justify-between">
                <button className="btn rounded text-[#00D390] border-0 py-[6px] px-[10px] text-base font-medium bg-[#F1F5E8] ">
-                <img className='w-[20%] mr-2' src="/src/assets/icon-downloads.png" alt="download" />
+                <img className='w-[20%] mr-2' src="../../../src/assets/icon-downloads.png" alt="download" />
                 {data.downloads}M
                </button>
                <button className="btn rounded text-[#FF8811] border-0 py-[6px] px-[10px] text-base font-medium bg-[#FFF0E1] ">
-                <img className='w-[20%] mr-2' src="/src/assets/icon-ratings.png" alt="download"/>
+                <img className='w-[20%] mr-2' src="../../../src/assets/icon-ratings.png" alt="download"/>
                 {data.ratingAvg}
                </button>
              </div>

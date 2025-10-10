@@ -44,7 +44,7 @@ const handleSort =(sortType)=>{
 
 const handelUnInstalled =(id)=>{
      removeFromLS(id.id);
-    swal(`Do You want to UnInstalled ${id.title}
+    swal(`Do You want to UnInstalled ${id.title}😱😨
           Also your Item Removing From Local Storage`)
    setInstall(prev=>prev.filter(app=>app.id !==id.id))
 }
@@ -113,10 +113,10 @@ return (
                     <h2 className="card-title mb-4 text-xl font-bold text-[#001931]">{app.title}</h2>
                  <ul className='flex gap-4 items-center'>
                     <li className='flex gap-3  items-center'>
-                        <img className='w-[30%]' src="/src/assets/icon-downloads.png" alt="" /><p className='text-[#00D390]'>{app.downloads}M</p>
+                        <img className='w-[30%]' src="../../../src/assets/icon-downloads.png" alt="" /><p className='text-[#00D390]'>{app.downloads}M</p>
                     </li>
                     <li className='flex gap-3 items-center'>
-                        <img className='w-[30%]' src="/src/assets/icon-ratings.png" alt="" /><p className='text-[#FF8811]'>{app.reviews}M</p>
+                        <img className='w-[30%]' src="../../../src/assets/icon-ratings.png" alt="" /><p className='text-[#FF8811]'>{app.reviews}M</p>
                     </li>
                     <li className='text-[#627382]'>
                         {app.size} MB

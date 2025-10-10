@@ -52,18 +52,18 @@ return (
             <Link key={data.id} to={`/CardDetails/${data.id}`}>
             <div key={index} className="card bg-white p-4  h-[100%] shadow-sm">
                <figure className='h-[90%] lg:h-[60%] '>
-                 <img className='w-full' src={data.image} alt="Shoes"/>
+                 <img className='w-full' src={data.image} alt="data.title"/>
                </figure>
                <div className="card-body py-0 mt-4 px-0">
                    <h2 className="text-xl font-medium text-[#001931]">{data.title}</h2>
                    
                  <div className="flex justify-between">
                    <button className="btn rounded text-[#00D390] border-0 py-[6px] px-[10px] text-base font-medium bg-[#F1F5E8] ">
-                    <img className='w-[20%] mr-2' src="/src/assets/icon-downloads.png" alt="download" />
+                    <img className='w-[20%] mr-2' src="../../../src/assets/icon-downloads.png" alt="download" />
                     {data.downloads}M
                    </button>
                    <button className="btn rounded text-[#FF8811] border-0 py-[6px] px-[10px] text-base font-medium bg-[#FFF0E1] ">
-                    <img className='w-[20%] mr-2' src="/src/assets/icon-ratings.png" alt="download"/>
+                    <img className='w-[20%] mr-2' src="../../../src/assets/icon-ratings.png" alt="download"/>
                     {data.ratingAvg}
                    </button>
                  </div>
