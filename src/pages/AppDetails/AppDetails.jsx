@@ -3,6 +3,9 @@ import { useLoaderData, useParams } from 'react-router';
 import BarChart from '../../components/BarChart/BarCharts';
 import swal from 'sweetalert';
 import { addToLS } from '../../Utilityes/addToLocal';
+import download from "../../assets/icon-downloads.png"
+import rating from "../../assets/icon-ratings.png"
+import review from "../../assets/icon-review.png"
 
 
 const AppDetails = () => {
@@ -13,9 +16,7 @@ const AppDetails = () => {
         const data =useLoaderData()
         const singleData =data.find(card=>card.id===Id)
         const {image,title,companyName,downloads,ratingAvg,reviews,size} =   singleData ;
-
         const [disable,setDisable]=useState('')
-        
             const getStoreApp = () => {
             const appData = localStorage.getItem("App");
             if (appData) {
@@ -23,7 +24,6 @@ const AppDetails = () => {
             }
             return [];
           };
-        
           useEffect(() => {
             const stored = getStoreApp();
             if (stored.includes(Id)) {
@@ -37,12 +37,7 @@ const AppDetails = () => {
     setIsInstall(true)
     
 }
-
-
     return (
-
-
-   
         <div className="p-4 bg-[#f9f9f9] lg:p-20">
         <div className="flex gap-10 justify-start  ">
             <div className='w-[100%] p-5 flex items-center bg-white lg:w-[30%] overflow-hidden'>
@@ -55,17 +50,17 @@ const AppDetails = () => {
                 <hr className='my-7 text-[#e6e6e6]' />
                <div className="flex items-center gap-6">
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-downloads.png" alt="" />
+                    <img src={download} alt="downloads" />
                     <p className='text-base text-[#627382]'>Downloads</p>
                     <h1 className='font-bold text-3xl'>{downloads}M</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-ratings.png" alt="rating" />
+                    <img src={rating} alt="rating" />
                     <p className='text-base text-[#627382]'>Average Ratings</p>
                     <h1 className='font-bold text-3xl'>{ratingAvg}</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-review.png" alt="review" />
+                    <img src={review} alt="review" />
                     <p className='text-base text-[#627382]'>Total Reviews</p>
                     <h1 className='font-bold text-3xl'>{reviews}K</h1>
                   </div>

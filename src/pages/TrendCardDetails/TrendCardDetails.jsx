@@ -3,6 +3,9 @@ import { useLoaderData, useParams } from 'react-router';
 import BarChart from '../../components/BarChart/BarCharts';
 import swal from 'sweetalert';
 import { addToLS } from '../../Utilityes/addToLocal';
+import download from "../../assets/icon-downloads.png"
+import rating from "../../assets/icon-ratings.png"
+import review from "../../assets/icon-review.png"
 
 
 
@@ -50,17 +53,17 @@ const handelInstall =(id)=>{
                 <hr className='my-7 text-[#e6e6e6]' />
                <div className="flex items-center gap-6">
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-downloads.png" alt="" />
+                    <img src={download} alt="download"/>
                     <p className='text-base text-[#627382]'>Downloads</p>
                     <h1 className='font-bold text-3xl'>{downloads}M</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-ratings.png" alt="rating" />
+                    <img src={rating} alt="rating" />
                     <p className='text-base text-[#627382]'>Average Ratings</p>
                     <h1 className='font-bold text-3xl'>{ratingAvg}</h1>
                   </div>
                   <div className='text-[#001931]'>
-                    <img src="/src/assets/icon-review.png" alt="review" />
+                    <img src={review} alt="review" />
                     <p className='text-base text-[#627382]'>Total Reviews</p>
                     <h1 className='font-bold text-3xl'>{reviews}K</h1>
                   </div>

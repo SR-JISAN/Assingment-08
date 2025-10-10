@@ -2,6 +2,8 @@ import React, { use, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { getStoreApp, removeFromLS } from '../../Utilityes/addToLocal';
 import swal from 'sweetalert';
+import download from "../../assets/icon-downloads.png"
+import rating from "../../assets/icon-ratings.png"
 
 const tApp = async ()=>{
     const pro = await fetch('appData2.json')
@@ -91,32 +93,27 @@ return (
                  </li>
                </ul>
              </div>
-
-
-
-
-
             </div>
             </div>
-        <div className="">
+        <div>
          {
             install.map(app=>
     <div className=" p-8 flex   items-center rounded-lg my-10   bg-white shadow-sm">
 
         <div className='w-[40%] lg:w-[20%]'>
             
-                  <img  className=' w-[90%] rounded-2xl md:w-[65%] lg:w-[50%] bg-cover ' src={app.image} alt="Movie" />
+         <img  className=' w-[90%] rounded-2xl md:w-[65%] lg:w-[50%] bg-cover ' src={app.image} alt="Movie" />
                   
-          </div>  
+        </div>  
          <div className="flex justify-between w-full items-center">
                 <div>
                     <h2 className="card-title mb-4 text-xl font-bold text-[#001931]">{app.title}</h2>
                  <ul className='flex gap-4 items-center'>
                     <li className='flex gap-3  items-center'>
-                        <img className='w-[30%]' src="../../../src/assets/icon-downloads.png" alt="" /><p className='text-[#00D390]'>{app.downloads}M</p>
+                        <img className='w-[30%]' src={download} alt="download" /><p className='text-[#00D390]'>{app.downloads}M</p>
                     </li>
                     <li className='flex gap-3 items-center'>
-                        <img className='w-[30%]' src="../../../src/assets/icon-ratings.png" alt="" /><p className='text-[#FF8811]'>{app.reviews}M</p>
+                        <img className='w-[30%]' src={rating} alt="rating" /><p className='text-[#FF8811]'>{app.reviews}M</p>
                     </li>
                     <li className='text-[#627382]'>
                         {app.size} MB

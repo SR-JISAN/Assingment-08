@@ -1,7 +1,8 @@
 import { Instagram,Facebook, Twitch, Twitter, Youtube, MapPinHouse,Pin,Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router';
-
 import React from 'react';
+import appStore from "../../assets/appStore.png"
+import playStore from "../../assets/playStore.png"
 
 const Footer = () => {
     return (
@@ -40,18 +41,20 @@ const Footer = () => {
                 <h1 className='text-2xl'>Support And Download</h1>
                 <div className="flex lg:justify-center my-10 gap-4 items-center">
                     <Link to={"https://play.google.com/store/apps?hl=en"}>
-                    <button className='btn bg-transparent border-[#D2D2D2] '><img src="/src/assets/playStore.png" alt="playStore" />Google Play</button></Link>
+                    <button className='btn bg-transparent border-[#D2D2D2] '><img src={playStore} alt="playStore" />Google Play</button></Link>
                     <Link to={'https://www.apple.com/store'}>
-                    <button className='btn bg-transparent border-[#D2D2D2]'><img src="/src/assets/appStore.png" alt="appStore" />App Store</button>
+                    <button className='btn bg-transparent border-[#D2D2D2]'><img src={appStore} alt="appStore" />App Store</button>
                     </Link>
                 </div>
-                
+                <p className='text-lg hover:text-blue-400'>@ Privacy Police 2025</p>
             </div>
-            <div className=" flex items-end ">
-                    <p className='text-lg hover:text-blue-400'>@2025_Privacy Policy</p>
-                </div>
+            
 
          </div>
+         <hr className='text-gray-500 my-7' />
+         <div className="text-center">
+                    <p className='text-lg hover:text-blue-400'>Copyright © 2025 - All right reserved</p>
+                </div>
      </footer>
 </div>
     );

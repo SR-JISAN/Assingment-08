@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { Github } from 'lucide-react';
+import logo from "../../assets/logo.png"
 
 
 const NavBar = () => {
@@ -30,7 +31,7 @@ const handelNav =(p)=>{
             </div>
        
               <a href="/" className='flex items-center'>
-               <img className='w-10' src="/src/assets/logo.png" alt="logo" />
+               <img className='w-10' src={logo} alt="logo" />
                  <h1  className="text-xl font-bold bg-gradient-to-r from-[#632EE3]  to-[#9F62F2] inline-block text-transparent bg-clip-text"> HERO.IO </h1> 
               </a>         
          </div>
