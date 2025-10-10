@@ -107,14 +107,14 @@ return (
         <div>
          {
             install.map(app=>
-    <div className=" p-8 flex   items-center rounded-lg my-10   bg-white shadow-sm">
+    <div className="p-2 lg:py-8 py-8 flex   items-center rounded-lg my-10   bg-white shadow-sm">
 
         <div className='w-[40%] lg:w-[20%]'>
             
-         <img  className=' w-[90%] rounded-2xl md:w-[65%] lg:w-[50%] bg-cover ' src={app.image} alt="Movie" />
+         <img  className=' w-[90%] rounded-2xl md:w-[65%] lg:w-[50%] bg-cover ' src={app.image} alt={app.title} />
                   
         </div>  
-         <div className="flex justify-between w-full items-center">
+         <div className="flex flex-col md:flex-row lg:flex-row justify-between w-full items-center">
                 <div>
                     <h2 className="card-title mb-4 text-xl font-bold text-[#001931]">{app.title}</h2>
                  <ul className='flex gap-4 items-center'>
@@ -130,7 +130,7 @@ return (
                  </ul>
                 </div>
                   
-               <button onClick={()=>handelUnInstalled(app)} className="btn bg-[#00D390] border-0">Uninstalled</button>
+               <button onClick={()=>handelUnInstalled(app)} className="btn mt-8 md:mt-0 lg:mt-0 bg-[#00D390] border-0">Uninstalled</button>
                
          </div>
      </div>
